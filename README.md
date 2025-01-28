@@ -2,6 +2,43 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+# Timed Content Application
+
+## Table of Contents
+- [ContentDisplayer](#contentdisplayer)
+- [Timed Content Application](#timed-content-application)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Running the Application](#running-the-application)
+  - [Development server](#development-server)
+  - [API Documentation](#api-documentation)
+
+## Introduction
+
+This is a web application that displays timed content items. The content is fetched from a local JSON database and automatically removes expired items.
+
+## Prerequisites
+
+- Node.js installed on your system
+- npm (Node Package Manager) installed
+
+## Setup
+
+1. Clone the repository:
+git clone https://github.com/yourusername/timed-content.git cd timed-content
+
+
+2. Install dependencies:
+npm install
+
+
+## Running the Application
+
+1. Start the JSON Server:
+npx json-server --watch db.json
+
 ## Development server
 
 To start a local development server, run:
@@ -12,48 +49,17 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+3. Open your web browser and navigate to `http://localhost:4200` to view the application.
 
-```bash
-ng generate component component-name
-```
+4. The API server runs on `http://localhost:3000`.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## API Documentation
 
-```bash
-ng generate --help
-```
+The application uses a local JSON database served by `json-server`. The API endpoint is:
 
-## Building
+- GET `/contents`: Fetches all content items
 
-To build the project run:
+The response format is an array of content objects:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

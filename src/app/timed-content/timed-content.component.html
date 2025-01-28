@@ -1,0 +1,22 @@
+<div class="container">
+  @for (content of contents; track content.id) {
+    <div class="content-item">
+      @if (getContentType(content.value) === 'text') {
+        <div class="text-content">
+          <p>{{ content.value }}</p>
+        </div>
+      } @else {
+        <div class="image-content">
+          <img [src]="content.value" alt="Timed Image" style="max-width: 100%; height: auto;">
+        </div>
+      }
+      <p>Expires at: {{ content.expirationDate | date:'medium' }}</p>
+      <hr>
+    </div>
+  }
+ @empty {
+  <div class="empty-state">
+    <p>No content to display.</p>
+  </div>
+}
+</div>

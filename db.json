@@ -1,0 +1,24 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "value": "This is the first message!",
+      "expirationDate": "2025-01-28T12:35:00Z"
+    },
+    {
+      "id": 2,
+      "value": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+      "expirationDate": "2025-01-28T12:37:00Z"
+    },
+    {
+      "id": 3,
+      "value": "This message will expire soon!",
+      "expirationDate": "2025-01-28T12:38:00Z"
+    },
+    {
+      "id": 3,
+      "value": "This message will expire in the future!",
+      "expirationDate": "2025-01-29T12:49:00Z"
+    }
+  ]
+}
