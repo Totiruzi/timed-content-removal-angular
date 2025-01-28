@@ -27,7 +27,7 @@ This is a web application that displays timed content items. The content is fetc
 ## Setup
 
 1. Clone the repository:
-git clone https://github.com/yourusername/timed-content.git cd timed-content
+git clone https://github.com/Totiruzi/timed-content-removal-angular.git cd timed-content-removal-angular
 
 
 2. Install dependencies:
