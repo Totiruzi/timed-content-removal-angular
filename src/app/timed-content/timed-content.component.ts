@@ -49,7 +49,8 @@ export class TimedContentComponent implements OnInit, AfterViewInit, OnDestroy {
     setInterval(() => {
       const now = new Date().getTime(); // Get current timestamp
       this.contents.forEach(content => {
-        if (new Date(content.expirationDate).getTime() <= now) {
+        const expirationTime  = new Date(content.expirationDate).getTime()
+        if (expirationTime <= now) {
           this.removeContent(Number(content.id)); // Remove expired content
         }
       });
@@ -57,7 +58,7 @@ export class TimedContentComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   removeContent(contentId: number): void {
-    this.contents = this.contents.filter((c) => c.id !== contentId.toString());
+    this.contents = this.contents.filter((content) => content.id !== contentId.toString());
   }
 
   getContentType(value: string): string {
